@@ -11,6 +11,7 @@ public class P1UniqueCharacters {
 	public static void main(String[] args) {
 		P1UniqueCharacters p1 = new P1UniqueCharacters();
 		System.out.println(P1UniqueCharacters.test("asbcb")); 
+		System.out.println(P1UniqueCharacters.test("asbcb")); 
 	}
 
 	public static boolean test(String str) {
