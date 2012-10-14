@@ -9,7 +9,19 @@ package ch1.arrays_and_strings;
 public class P1UniqueCharacters {
 
 	public static void main(String[] args) {
-
+		P1UniqueCharacters p1 = new P1UniqueCharacters();
+		System.out.println(P1UniqueCharacters.test("asbcb")); 
 	}
 
+	public static boolean test(String str) {
+		int len = str.length();
+
+		for(int i = 0; i < len - 1; i ++) {
+			for (int j = i + 1; j < len; j ++) {
+				if(str.charAt(i) != str.charAt(j))
+					return false;
+			}
+		}	
+		return true;
+	}
 }
