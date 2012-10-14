@@ -11,7 +11,7 @@ public class P1UniqueCharacters {
 	public static void main(String[] args) {
 		P1UniqueCharacters p1 = new P1UniqueCharacters();
 		System.out.println(P1UniqueCharacters.test("asbcb")); 
-		System.out.println(P1UniqueCharacters.test("asbcb")); 
+		System.out.println(P1UniqueCharacters.test("asbc")); 
 	}
 
 	public static boolean test(String str) {
@@ -19,7 +19,7 @@ public class P1UniqueCharacters {
 
 		for(int i = 0; i < len - 1; i ++) {
 			for (int j = i + 1; j < len; j ++) {
-				if(str.charAt(i) != str.charAt(j))
+				if(str.charAt(i) == str.charAt(j))
 					return false;
 			}
 		}	
