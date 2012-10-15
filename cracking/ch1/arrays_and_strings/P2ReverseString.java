@@ -16,14 +16,14 @@ public class P2ReverseString {
 		System.out.println(str);
 		StringBuffer sb = new StringBuffer();
 		int len = str.length();
-		for(int i = 0; i < str.length(); i ++) {
+		/*for(int i = 0; i < str.length(); i ++) {
 			System.out.println(str.charAt(len-i-1));
 			sb.append(str.charAt(len-i-1));
-		}
-		/*for(int i = str.length() - 1; i == 0; i --) {
-			System.out.println(i + str.charAt(i));
-			sb.append(str.charAt(i));
 		}*/
+		for(int i = str.length() - 1; i > -1; i --) {
+			System.out.println(i + ", " + str.charAt(i));
+			sb.append(str.charAt(i));
+		}
 		return sb.toString();
 	}
 }
