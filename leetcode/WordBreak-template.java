@@ -7,10 +7,26 @@ dict = ["leet", "code"].
 Return true because "leetcode" can be segmented as "leet code"
 */
 
-import java.util.Set;
+import java.util.*;
 
 public class WordBreak {
 	public boolean wordBreak(String s, Set<String> dict) {
+		
 		return true;
 	}
+
+	public static void main (String args[]) {
+		String s = "leetcode";
+		Set<String> dict = new HashSet<String>();
+		String[] words = {"leet", "code"};
+		
+		for (String word: words) {
+			System.out.println(word);	
+			dict.add(word);	
+		}
+		System.out.println(dict);
+		
+		WordBreak wb = new WordBreak();
+		wb.wordBreak(s, dict);
+	} 
 }
