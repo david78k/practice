@@ -5,6 +5,12 @@ s = "leetcode",
 dict = ["leet", "code"].
 
 Return true because "leetcode" can be segmented as "leet code"
+
+(Wrong)
+Input:	"aaaaaaa", ["aaaa","aaa"]
+Output:	false
+Expected: true
+
 */
 
 import java.util.*;
@@ -33,9 +39,10 @@ public class WordBreak {
 	public static void main (String args[]) {
 		String s = "leetcode";
 		Set<String> dict = new HashSet<String>();
-		String[] words = {"leet", "code"};
+		String[] words = {"aaaa", "aaa"};
+		//String[] words = {"leet", "code"};
 		//String[] words = {"leet", "code", "s"};
-		String[] strings = {"leetcode", "sleetcodes", "sleetscodes"};
+		String[] strings = {"leetcode", "sleetcodes", "sleetscodes", "aaaaaaa"};
 		
 		for (String word: words) {
 			//System.out.println(word);	
