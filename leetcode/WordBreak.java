@@ -11,23 +11,39 @@ import java.util.*;
 
 public class WordBreak {
 	public boolean wordBreak(String s, Set<String> dict) {
-		String tmp;
+		String tmp = "";
+		char c;
+		int remaining = s.length();
 			
-		return true;
+		for(int i = 0; i < s.length(); i ++) {
+			c = s.charAt(i);
+			//System.out.println(c);
+			tmp += c;
+			//System.out.println(tmp);
+			if (dict.contains(tmp)) {
+				// number of characters remaining
+				remaining -= tmp.length();		
+				tmp = "";
+			}	
+		}
+		
+		return (remaining == 0)?true:false;
 	}
 
 	public static void main (String args[]) {
 		String s = "leetcode";
 		Set<String> dict = new HashSet<String>();
-		String[] words = {"leet", "code"};
+		String[] words = {"leet", "code", "s"};
+		String[] strings = {"leetcode", "sleetcodes", "sleetscodes"};
 		
 		for (String word: words) {
-			System.out.println(word);	
+			//System.out.println(word);	
 			dict.add(word);	
 		}
 		System.out.println(dict);
 		
 		WordBreak wb = new WordBreak();
-		wb.wordBreak(s, dict);
+		for (String str: strings)
+			System.out.println(str + ": " + wb.wordBreak(str, dict));
 	} 
 }

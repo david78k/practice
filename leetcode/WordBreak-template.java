@@ -18,15 +18,17 @@ public class WordBreak {
 	public static void main (String args[]) {
 		String s = "leetcode";
 		Set<String> dict = new HashSet<String>();
-		String[] words = {"leet", "code"};
-		
-		for (String word: words) {
-			System.out.println(word);	
-			dict.add(word);	
-		}
-		System.out.println(dict);
-		
-		WordBreak wb = new WordBreak();
-		wb.wordBreak(s, dict);
+		String[] words = {"leet", "code", "s"};
+                String[] strings = {"leetcode", "sleetcodes", "sleetscodes"};
+
+                for (String word: words) {
+                        //System.out.println(word);
+                        dict.add(word);
+                }
+                System.out.println(dict);
+
+                WordBreak wb = new WordBreak();
+                for (String str: strings)
+                        System.out.println(str + ": " + wb.wordBreak(str, dict));
 	} 
 }
