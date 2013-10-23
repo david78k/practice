@@ -33,7 +33,8 @@ public class WordBreak {
 	public static void main (String args[]) {
 		String s = "leetcode";
 		Set<String> dict = new HashSet<String>();
-		String[] words = {"leet", "code", "s"};
+		String[] words = {"leet", "code"};
+		//String[] words = {"leet", "code", "s"};
 		String[] strings = {"leetcode", "sleetcodes", "sleetscodes"};
 		
 		for (String word: words) {
