@@ -1,4 +1,12 @@
-default: maxdepth
+default: reverseinteger
+
+reverseinteger:
+	javac ReverseInteger.java
+	java ReverseInteger
+	
+sametree:
+	javac SameTree.java
+	java SameTree
 
 maxdepth:
 	javac MaxDepth.java
