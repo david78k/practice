@@ -18,12 +18,36 @@ Throw an exception? Good, but what if throwing an exception is not an option? Yo
 
 public class ReverseInteger {
 	public int reverse(int x) {
-		return 0;
+		System.out.println(x);	
+		String str = "" + x;
+		String newstr = "";
+		char[] chars = str.toCharArray();
+		boolean isNegative = false;
+		
+		for (char c: chars) {
+			System.out.println(c);
+			if (c == '-') isNegative = true;
+			else
+				newstr = c + newstr;
+		}
+
+		for (char c: newstr.toCharArray()) {
+			if (c == '0') newstr = newstr.substring(1);
+		}
+	
+		if (isNegative) newstr = '-' + newstr;
+
+		System.out.println(newstr);
+
+		return Integer.parseInt(newstr);
 	}
 
 	public static void main (String [] args) {
 		ReverseInteger ri = new ReverseInteger();
 		
-		ri.reverse(0);	
+		ri.reverse(123);	
+		ri.reverse(-123);	
+		ri.reverse(100);	
+		ri.reverse(-100);	
 	}
 }
