@@ -1,4 +1,8 @@
-default: reverseinteger
+default: stock1
+
+stock1:
+	javac Stock1.java
+	java Stock1
 
 reverseinteger:
 	javac ReverseInteger.java

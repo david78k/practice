@@ -19,6 +19,24 @@ Throw an exception? Good, but what if throwing an exception is not an option? Yo
 public class ReverseInteger {
 	public int reverse(int x) {
 		System.out.println(x);	
+		boolean negative = (x < 0);
+		int result = 0;
+
+		x = Math.abs(x);
+
+		while (x > 0) {
+			result = result * 10 + x % 10;
+			x /= 10;	
+		}
+
+		if (result < 0) return -1;
+		if (negative) result *= -1;
+	
+		return result;	
+	}
+
+	public int reverse2(int x) {
+		System.out.println(x);	
 		String str = "" + x;
 		String newstr = "";
 		char[] chars = str.toCharArray();
@@ -31,9 +49,16 @@ public class ReverseInteger {
 				newstr = c + newstr;
 		}
 
-		for (char c: newstr.toCharArray()) {
+		char c;
+		int i = 0;
+		while ((c = newstr.charAt(i)) == '0') 
+			i ++;
+		newstr = newstr.substring(i);
+		
+		/*for (char c: newstr.toCharArray()) {
 			if (c == '0') newstr = newstr.substring(1);
 		}
+		*/
 	
 		if (isNegative) newstr = '-' + newstr;
 
@@ -45,9 +70,23 @@ public class ReverseInteger {
 	public static void main (String [] args) {
 		ReverseInteger ri = new ReverseInteger();
 		
-		ri.reverse(123);	
-		ri.reverse(-123);	
-		ri.reverse(100);	
-		ri.reverse(-100);	
+		int[] numbers = {123, 1000, 1003, 1000000003};
+
+		for (int n: numbers) {
+			//System.out.println(ri.reverse(n)); 
+			//System.out.println(ri.reverse(-1*n)); 
+			System.out.println(ri.reverse(n) + "\n"); 
+			System.out.println(ri.reverse(-1*n) + "\n"); 
+		}
+/*
+		System.out.println(ri.reverse(123)); 
+		System.out.println(ri.reverse(-123)); 
+		System.out.println(ri.reverse(1000)); 
+		System.out.println(ri.reverse(-1000)); 
+		System.out.println(ri.reverse(1003)); 
+		System.out.println(ri.reverse(-1003)); 
+		System.out.println(ri.reverse(1000000003));	
+		System.out.println(ri.reverse(-1000000003));	
+*/
 	}
 }
