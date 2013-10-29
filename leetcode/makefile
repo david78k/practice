@@ -1,4 +1,8 @@
-default: stock1
+default: llc
+
+llc:
+	javac LinkedListCycle.java
+	java LinkedListCycle
 
 stock1:
 	javac Stock1.java
