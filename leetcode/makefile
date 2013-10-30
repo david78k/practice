@@ -1,12 +1,16 @@
-default: llc
-
-llc:
-	javac LinkedListCycle.java
-	java LinkedListCycle
+default: stock2
 
 stock1:
 	javac Stock1.java
 	java Stock1
+
+stock2:
+	javac Stock2.java
+	java Stock2
+
+llc:
+	javac LinkedListCycle.java
+	java LinkedListCycle
 
 reverseinteger:
 	javac ReverseInteger.java
