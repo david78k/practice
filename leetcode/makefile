@@ -1,4 +1,8 @@
-default: stock2
+default: rightpointers
+
+rightpointers:
+	javac RightPointers.java
+	java RightPointers
 
 stock1:
 	javac Stock1.java
