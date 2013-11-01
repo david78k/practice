@@ -1,5 +1,13 @@
-default: rightpointers
+default: searchinsert
 
+searchinsert:
+	javac SearchInsertPosition.java
+	java SearchInsertPosition
+
+uniquebst:
+	javac UniqueBST.java
+	java UniqueBST
+	
 rightpointers:
 	javac RightPointers.java
 	java RightPointers
