@@ -11,3 +11,34 @@ Here are few examples.
 [1,3,5,6], 0 ??0
 
 */
+
+public class SearchInsertPosition {
+	public int searchInsert(int[] A, int target) {
+		int i;
+
+		if (A == null) return 0;
+		if (A.length == 0) return 0;
+
+		for (i = 0; i < A.length; i ++) {
+			if (A[i] >= target) return i;
+			System.out.println(i);
+		}
+
+		if (A[i - 1] < target) return i;
+		return 0;
+	}
+
+	public static void main(String[] args) {
+		SearchInsertPosition sip = new SearchInsertPosition();
+		//int[] A = {1, 3, 5, 6};
+		//int[] A = {1};
+		int[] A = {};
+		A = null;
+		int target = 7;	
+		//target = 5;	
+		//target = 2;	
+		//target = 0;	
+		System.out.println("target = " + target);
+		System.out.println("index = " + sip.searchInsert(A, target));
+	}
+}

@@ -1,4 +1,8 @@
-default: searchinsert
+default: removeduplicates
+
+removeduplicates:
+	javac RemoveDuplicatesFromSortedList.java
+	java RemoveDuplicatesFromSortedList
 
 searchinsert:
 	javac SearchInsertPosition.java
