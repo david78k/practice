@@ -1,4 +1,12 @@
-default: removeduplicates
+default: symmetrictree
+
+symmetrictree:
+	javac SymmetricTree.java
+	java SymmetricTree
+
+removeelement:
+	javac RemoveElement.java
+	java RemoveElement
 
 removeduplicates:
 	javac RemoveDuplicatesFromSortedList.java
