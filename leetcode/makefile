@@ -1,4 +1,4 @@
-default: symmetrictree
+default: removeduplicatesarray
 
 climbstairs:
 	javac ClimbingStairs.java
@@ -11,6 +11,10 @@ symmetrictree:
 removeelement:
 	javac RemoveElement.java
 	java RemoveElement
+
+removeduplicatesarray:
+	javac RemoveDuplicatesFromSortedArray.java
+	java RemoveDuplicatesFromSortedArray
 
 removeduplicates:
 	javac RemoveDuplicatesFromSortedList.java
