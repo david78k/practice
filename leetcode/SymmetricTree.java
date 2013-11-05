@@ -47,11 +47,13 @@ The above binary tree is serialized as "{1,2,3,#,#,4,#,#,5}".
 
 public class SymmetricTree {
     public boolean isSymmetric(TreeNode root) {
-
+		
 		return false;
 	}
 
 	public static void main(String[] args) {
-
+		SymmetricTree st = new SymmetricTree();
+		TreeNode root = new TreeNode(1);
+		System.out.println(st.isSymmetric(root));
 	}	
 }

@@ -1,5 +1,9 @@
 default: symmetrictree
 
+climbstairs:
+	javac ClimbingStairs.java
+	java ClimbingStairs
+	
 symmetrictree:
 	javac SymmetricTree.java
 	java SymmetricTree
