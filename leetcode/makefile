@@ -1,5 +1,9 @@
-default: removeduplicatesarray
+default: maxsubarray
 
+maxsubarray:
+	javac MaximumSubarray.java
+	java MaximumSubarray
+	
 climbstairs:
 	javac ClimbingStairs.java
 	java ClimbingStairs
