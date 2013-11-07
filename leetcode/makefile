@@ -1,4 +1,8 @@
-default: maxsubarray
+default: sortedarraytobst
+
+sortedarraytobst:
+	javac ConvertSortedArrayToBST.java
+	java ConvertSortedArrayToBST
 
 maxsubarray:
 	javac MaximumSubarray.java
